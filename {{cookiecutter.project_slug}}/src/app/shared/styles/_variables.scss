@@ -1,0 +1,316 @@
+// VUCEM Angular - SCSS Variables
+// ============================================================================
+
+// Color Palette - VUCEM Government Design System
+// ============================================================================
+
+// Primary colors (Mexican Government Blue)
+$vucem-primary-50: #e3f2fd;
+$vucem-primary-100: #bbdefb;
+$vucem-primary-200: #90caf9;
+$vucem-primary-300: #64b5f6;
+$vucem-primary-400: #42a5f5;
+$vucem-primary-500: #2196f3; // Main primary
+$vucem-primary-600: #1e88e5;
+$vucem-primary-700: #1976d2;
+$vucem-primary-800: #1565c0;
+$vucem-primary-900: #0d47a1;
+
+// Accent colors (Mexican Government Gold)
+$vucem-accent-50: #fff3e0;
+$vucem-accent-100: #ffe0b2;
+$vucem-accent-200: #ffcc80;
+$vucem-accent-300: #ffb74d;
+$vucem-accent-400: #ffa726;
+$vucem-accent-500: #ff9800; // Main accent
+$vucem-accent-600: #fb8c00;
+$vucem-accent-700: #f57c00;
+$vucem-accent-800: #ef6c00;
+$vucem-accent-900: #e65100;
+
+// Semantic colors
+$success-color: #4caf50;
+$success-light: #c8e6c9;
+$success-dark: #2e7d32;
+
+$warning-color: #ff9800;
+$warning-light: #ffe0b2;
+$warning-dark: #f57c00;
+
+$error-color: #f44336;
+$error-light: #ffcdd2;
+$error-dark: #d32f2f;
+
+$info-color: #2196f3;
+$info-light: #bbdefb;
+$info-dark: #1976d2;
+
+// Neutral colors
+$white: #ffffff;
+$gray-50: #fafafa;
+$gray-100: #f5f5f5;
+$gray-200: #eeeeee;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #9e9e9e;
+$gray-600: #757575;
+$gray-700: #616161;
+$gray-800: #424242;
+$gray-900: #212121;
+$black: #000000;
+
+// Background colors
+$background-color: $gray-50;
+$surface-color: $white;
+$card-background: $white;
+
+// Dark theme backgrounds
+$dark-background-color: #303030;
+$dark-surface-color: #424242;
+$dark-card-background: #424242;
+
+// Text colors (Material Design opacity standards)
+$text-primary: rgba(0, 0, 0, 0.87);
+$text-secondary: rgba(0, 0, 0, 0.6);
+$text-disabled: rgba(0, 0, 0, 0.38);
+$text-hint: rgba(0, 0, 0, 0.38);
+
+$text-disabled-light: rgba(0, 0, 0, 0.12);
+
+// Dark theme text colors
+$dark-text-primary: rgba(255, 255, 255, 0.87);
+$dark-text-secondary: rgba(255, 255, 255, 0.6);
+$dark-text-disabled: rgba(255, 255, 255, 0.38);
+$dark-text-hint: rgba(255, 255, 255, 0.38);
+
+// Typography Scale
+// ============================================================================
+
+$font-family-base: 'Roboto', 'Helvetica Neue', sans-serif;
+$font-family-heading: 'Roboto', 'Helvetica Neue', sans-serif;
+$font-family-mono: 'Roboto Mono', 'Courier New', monospace;
+
+// Font sizes (rem scale)
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-md: 1rem;       // 16px (base)
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-xxl: 1.5rem;    // 24px
+$font-size-xxxl: 2rem;     // 32px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Letter spacing
+$letter-spacing-tight: -0.025em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+
+// Spacing Scale (8px base unit)
+// ============================================================================
+
+$spacing-xs: 4px;   // 0.25rem
+$spacing-sm: 8px;   // 0.5rem
+$spacing-md: 16px;  // 1rem
+$spacing-lg: 24px;  // 1.5rem
+$spacing-xl: 32px;  // 2rem
+$spacing-xxl: 48px; // 3rem
+$spacing-xxxl: 64px; // 4rem
+
+// Component specific spacing
+$component-padding: $spacing-md;
+$component-margin: $spacing-md;
+$section-padding: $spacing-xl;
+
+// Layout Variables
+// ============================================================================
+
+// Header
+$header-height: 64px;
+$header-height-mobile: 56px;
+$header-z-index: 1000;
+
+// Footer
+$footer-height: 80px;
+$footer-height-mobile: 120px;
+
+// Sidebar/Navigation
+$sidenav-width: 280px;
+$sidenav-width-collapsed: 64px;
+$sidenav-mobile-width: 100vw;
+$sidenav-z-index: 999;
+
+// Content
+$content-max-width: 1200px;
+$content-padding: $spacing-lg;
+$content-mobile-padding: $spacing-md;
+
+// Breakpoints (Mobile-first approach)
+// ============================================================================
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;  // Small devices (landscape phones)
+$breakpoint-md: 768px;  // Medium devices (tablets)
+$breakpoint-lg: 992px;  // Large devices (desktops)
+$breakpoint-xl: 1200px; // Extra large devices (large desktops)
+$breakpoint-xxl: 1400px; // Extra extra large devices
+
+// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Borders and Radius
+// ============================================================================
+
+$border-width: 1px;
+$border-color: $gray-300;
+$border-color-dark: $gray-600;
+
+$border-radius-none: 0;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-pill: 9999px;
+$border-radius-circle: 50%;
+
+// Shadows (Material Design elevation)
+// ============================================================================
+
+$shadow-none: none;
+$shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow-xl: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+// Form Elements
+// ============================================================================
+
+$input-height: 48px;
+$input-height-sm: 40px;
+$input-height-lg: 56px;
+
+$input-padding-x: $spacing-md;
+$input-padding-y: $spacing-sm;
+
+$input-border-width: $border-width;
+$input-border-color: $gray-400;
+$input-border-radius: $border-radius-sm;
+
+$input-focus-border-color: $vucem-primary-500;
+$input-focus-box-shadow: 0 0 0 2px rgba($vucem-primary-500, 0.2);
+
+// Buttons
+// ============================================================================
+
+$button-height: 40px;
+$button-height-sm: 32px;
+$button-height-lg: 48px;
+$button-size-sm: 32px;
+
+$button-padding-x: $spacing-lg;
+$button-padding-y: $spacing-sm;
+$button-padding-x-sm: $spacing-md;
+$button-padding-y-sm: $spacing-xs;
+
+$button-border-radius: $border-radius-sm;
+$button-font-weight: $font-weight-medium;
+
+// Icons
+// ============================================================================
+
+$icon-size-xs: 16px;
+$icon-size-sm: 20px;
+$icon-size-md: 24px;
+$icon-size-lg: 32px;
+$icon-size-xl: 48px;
+$icon-size-xxl: 64px;
+
+// Z-Index Scale
+// ============================================================================
+
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+$z-index-toast: 1080;
+
+// Animation and Transitions
+// ============================================================================
+
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+
+// Timing functions
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Animation durations
+$duration-xs: 150ms;
+$duration-sm: 200ms;
+$duration-md: 300ms;
+$duration-lg: 500ms;
+$duration-xl: 750ms;
+
+// Tables
+// ============================================================================
+
+$table-border-color: $gray-200;
+$table-stripe-bg: $gray-50;
+$table-hover-bg: rgba($vucem-primary-500, 0.04);
+$table-header-bg: $gray-100;
+
+// Cards
+// ============================================================================
+
+$card-padding: $spacing-lg;
+$card-padding-sm: $spacing-md;
+$card-border-radius: $border-radius-lg;
+$card-shadow: $shadow-sm;
+$card-hover-shadow: $shadow-md;
+
+// Government/VUCEM Specific
+// ============================================================================
+
+// Official colors for Mexican government applications
+$mexico-flag-green: #006847;
+$mexico-flag-red: #ce1126;
+$mexico-flag-white: #ffffff;
+
+// Accessibility compliance colors (WCAG 2.2 AA)
+$focus-ring-color: $vucem-primary-600;
+$focus-ring-width: 2px;
+$focus-ring-offset: 2px;
+
+// High contrast theme colors
+$high-contrast-bg: $white;
+$high-contrast-text: $black;
+$high-contrast-border: $black;
+
+// Print styles
+$print-text-color: $black;
+$print-bg-color: $white;

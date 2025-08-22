@@ -1,0 +1,160 @@
+#!/bin/bash
+
+#############################################################################
+# vucem-angular - Generador Angular VUCEM Ultra Moderno
+# 
+# Descripción: Script principal para crear aplicaciones Angular VUCEM
+#              con arquitectura limpia y stack 2025
+#
+# Uso: vucem-angular <nombre> <area> [descripción]
+# 
+# Autor: VUCEM Team
+# Versión: 1.0.0
+# Fecha: 2025-08-22
+#############################################################################
+
+set -euo pipefail
+IFS=$'\n\t'
+
+# ===========================================================================
+# CONFIGURACIÓN
+# ===========================================================================
+
+readonly SCRIPT_VERSION="1.0.0"
+readonly GITHUB_RAW="https://raw.githubusercontent.com/osvalois-ultrasist/template-vucem-componente/main"
+
+# Colores para máxima legibilidad
+if [[ -t 1 ]]; then
+    readonly B='\033[1m'    # Bold
+    readonly R='\033[0;31m' # Red
+    readonly G='\033[0;32m' # Green
+    readonly Y='\033[0;33m' # Yellow
+    readonly C='\033[0;36m' # Cyan
+    readonly P='\033[0;35m' # Purple
+    readonly NC='\033[0m'   # No Color
+else
+    readonly B='' R='' G='' Y='' C='' P='' NC=''
+fi
+
+# ===========================================================================
+# FUNCIONES
+# ===========================================================================
+
+msg() { echo -e "${C}▸${NC} $*"; }
+ok() { echo -e "${G}✓${NC} $*"; }
+warn() { echo -e "${Y}⚠${NC} $*"; }
+err() { echo -e "${R}✗${NC} $*" >&2; }
+
+help() {
+    echo -e "${B}${P}VUCEM Angular${NC} - Generador de Aplicaciones Modernas"
+    echo
+    echo -e "${B}Stack Angular 2025:${NC}"
+    echo "  • Angular 20.0.0 + Signal-based Reactivity"
+    echo "  • TypeScript 5.7 + Strict Mode"
+    echo "  • Angular Material 17 + Design System"
+    echo "  • NgRx 17 + Signals Integration"
+    echo "  • Clean Architecture + DDD"
+    echo
+    echo -e "${B}USO:${NC}"
+    echo "  vucem-angular <nombre> <area> [\"descripción\"]"
+    echo
+    echo -e "${B}EJEMPLOS:${NC}"
+    echo "  vucem-angular mi-app usuarios"
+    echo "  vucem-angular sistema-aduanas aduanas \"Sistema de gestión\""
+    echo
+    echo -e "${B}CARACTERÍSTICAS:${NC}"
+    echo "  ✨ Arquitectura Clean de 4 capas"
+    echo "  🚀 Signals + Standalone Components"
+    echo "  🎨 Material Design 3 + Accesibilidad WCAG"
+    echo "  🔐 JWT + Seguridad Enterprise"
+    echo "  📱 PWA + SSR Ready"
+    echo "  🧪 Vitest + Cypress Testing"
+    echo
+    echo -e "${B}REQUISITOS:${NC}"
+    echo "  Node.js 18+, npm 9+, Angular CLI 20+"
+    echo
+    echo -e "${B}MÁS INFO:${NC}"
+    echo "  curl -s ${GITHUB_RAW}/setup-angular | bash  # Setup sistema"
+    echo "  curl -s ${GITHUB_RAW}/check-angular | bash  # Validar proyecto"
+    echo
+}
+
+# Validación ultra rápida
+valid() {
+    local name="$1"
+    [[ ${#name} -ge 3 ]] && [[ ${#name} -le 50 ]] && [[ "$name" =~ ^[a-z][a-z0-9-]*$ ]] && [[ "$name" != *"--"* ]]
+}
+
+# ===========================================================================
+# PROGRAMA PRINCIPAL
+# ===========================================================================
+
+main() {
+    # Mostrar ayuda si no hay argumentos suficientes
+    if [[ $# -lt 2 ]]; then
+        help
+        exit 1
+    fi
+    
+    local name="$1"
+    local area="$2"
+    local desc="${3:-Aplicación Angular VUCEM para $area}"
+    
+    # Validación rápida
+    if ! valid "$name" || ! valid "$area"; then
+        err "Nombre/área debe: 3-50 chars, solo minúsculas y guiones, empezar con letra"
+        exit 1
+    fi
+    
+    msg "Creando aplicación Angular: vucem-${name}"
+    
+    # Verificar Node.js y npm
+    if ! command -v node &> /dev/null; then
+        err "Node.js requerido. Instalar desde: https://nodejs.org/"
+        exit 1
+    fi
+    
+    if ! command -v npm &> /dev/null; then
+        err "npm requerido. Viene con Node.js"
+        exit 1
+    fi
+    
+    # Verificar versiones mínimas
+    local node_version=$(node --version | sed 's/v//' | cut -d'.' -f1)
+    if [[ $node_version -lt 18 ]]; then
+        err "Node.js 18+ requerido. Versión actual: v$node_version"
+        exit 1
+    fi
+    
+    # Descargar y ejecutar generador remoto Angular
+    msg "Descargando generador Angular desde GitHub..."
+    
+    if curl -sSL "${GITHUB_RAW}/crear-angular-remoto.sh" | bash -s "$name" "$area" "$desc"; then
+        echo
+        ok "¡Aplicación Angular creada!"
+        echo
+        echo -e "${B}${P}Próximos pasos:${NC}"
+        echo "  cd vucem-${name}"
+        echo "  npm install"
+        echo "  ng serve"
+        echo
+        echo -e "${B}URLs de desarrollo:${NC}"
+        echo "  http://localhost:4200         # Aplicación"
+        echo "  http://localhost:4200/docs    # Documentación"
+        echo
+        echo -e "${B}Comandos útiles:${NC}"
+        echo "  npm run build:prod    # Build producción"
+        echo "  npm run test          # Tests unitarios"
+        echo "  npm run e2e           # Tests E2E"
+        echo "  npm run lint          # Linting"
+        echo "  npm run a11y          # Accesibilidad"
+        echo
+        echo -e "${P}¡Angular 2025 listo para desarrollo! 🚀${NC}"
+    else
+        err "Error al crear aplicación Angular"
+        exit 1
+    fi
+}
+
+# Ejecutar
+main "$@"

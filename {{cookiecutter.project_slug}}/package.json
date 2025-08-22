@@ -1,0 +1,97 @@
+{
+  "name": "{{cookiecutter.project_slug}}",
+  "version": "1.0.0",
+  "description": "{{cookiecutter.component_description}}",
+  "author": "{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>",
+  "license": "{{cookiecutter.license}}",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repository_name}}.git"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "start:prod": "ng serve --configuration=production",
+    "build": "ng build",
+    "build:prod": "ng build --configuration=production",
+    "build:analyze": "ng build --source-map && npx webpack-bundle-analyzer dist/{{cookiecutter.project_slug}}/stats.json",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
+    "format": "prettier --write \"src/**/*.{ts,html,scss,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,scss,json}\"",
+    "prepare": "husky install",
+    "compodoc": "npx @compodoc/compodoc -p tsconfig.doc.json -s",
+    "a11y": "axe --dir dist/{{cookiecutter.project_slug}} --show-errors",
+    "lighthouse": "lhci autorun"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^{{cookiecutter.angular_version}}",
+    "@angular/cdk": "^{{cookiecutter.material_version}}",
+    "@angular/common": "^{{cookiecutter.angular_version}}",
+    "@angular/compiler": "^{{cookiecutter.angular_version}}",
+    "@angular/core": "^{{cookiecutter.angular_version}}",
+    "@angular/forms": "^{{cookiecutter.angular_version}}",
+    "@angular/material": "^{{cookiecutter.material_version}}",
+    "@angular/platform-browser": "^{{cookiecutter.angular_version}}",
+    "@angular/platform-browser-dynamic": "^{{cookiecutter.angular_version}}",
+    "@angular/router": "^{{cookiecutter.angular_version}}",
+    "{% if cookiecutter.enable_ssr == 'true' %}@angular/ssr": "^{{cookiecutter.angular_version}}",{% endif %}
+    "{% if cookiecutter.enable_pwa == 'true' %}@angular/service-worker": "^{{cookiecutter.angular_version}}",{% endif %}
+    "{% if cookiecutter.state_management == 'ngrx' %}@ngrx/store": "^{{cookiecutter.ngrx_version}}",
+    "@ngrx/effects": "^{{cookiecutter.ngrx_version}}",
+    "@ngrx/entity": "^{{cookiecutter.ngrx_version}}",
+    "@ngrx/router-store": "^{{cookiecutter.ngrx_version}}",
+    "@ngrx/store-devtools": "^{{cookiecutter.ngrx_version}}",{% endif %}
+    "rxjs": "~7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^{{cookiecutter.angular_version}}",
+    "@angular/cli": "^{{cookiecutter.angular_version}}",
+    "@angular/compiler-cli": "^{{cookiecutter.angular_version}}",
+    "{% if cookiecutter.testing_framework == 'vitest' %}@analogjs/vitest-angular": "^1.0.0",
+    "vitest": "^2.0.0",{% else %}@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",{% endif %}
+    "{% if cookiecutter.linting == 'eslint' %}@angular-eslint/builder": "^17.0.0",
+    "@angular-eslint/eslint-plugin": "^17.0.0",
+    "@angular-eslint/eslint-plugin-template": "^17.0.0",
+    "@angular-eslint/schematics": "^17.0.0",
+    "@angular-eslint/template-parser": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.57.0",{% endif %}
+    "{% if cookiecutter.formatting == 'prettier' %}prettier": "^3.0.0",
+    "prettier-eslint": "^16.0.0",{% endif %}
+    "{% if cookiecutter.git_hooks == 'husky' %}husky": "^8.0.0",
+    "lint-staged": "^15.0.0",{% endif %}
+    "{% if cookiecutter.bundle_analyzer == 'true' %}webpack-bundle-analyzer": "^4.10.0",{% endif %}
+    "cypress": "^13.0.0",
+    "@cypress/schematic": "^2.0.0",
+    "@compodoc/compodoc": "^1.1.21",
+    "@axe-core/cli": "^4.8.0",
+    "@lhci/cli": "^0.12.0",
+    "typescript": "~{{cookiecutter.typescript_version}}"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,html,scss,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

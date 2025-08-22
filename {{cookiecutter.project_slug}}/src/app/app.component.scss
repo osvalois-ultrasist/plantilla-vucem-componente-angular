@@ -1,0 +1,77 @@
+@use '@angular/material' as mat;
+@import './shared/styles/variables';
+@import './shared/styles/mixins';
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-sidenav-container {
+  flex: 1;
+  display: flex;
+  
+  .app-sidenav {
+    width: $sidenav-width;
+    background-color: mat.get-color-from-palette($vucem-primary, 50);
+    border-right: 1px solid mat.get-color-from-palette($vucem-primary, 200);
+    
+    @include respond-to(mobile) {
+      width: $sidenav-mobile-width;
+    }
+  }
+  
+  .app-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    .main-content {
+      flex: 1;
+      padding: $content-padding;
+      overflow-y: auto;
+      background-color: $background-color;
+      
+      @include respond-to(mobile) {
+        padding: $content-mobile-padding;
+      }
+    }
+  }
+}
+
+// Accesibilidad
+:host {
+  
+  // High contrast mode
+  @media (prefers-contrast: high) {
+    .app-sidenav {
+      border-right-width: 2px;
+      border-right-color: currentColor;
+    }
+  }
+  
+  // Reduced motion
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  // Dark mode support
+  @media (prefers-color-scheme: dark) {
+    .app-main-content .main-content {
+      background-color: $dark-background-color;
+    }
+  }
+}
+
+// Focus management
+.main-content:focus {
+  outline: 2px solid mat.get-color-from-palette($vucem-accent, 500);
+  outline-offset: 2px;
+}

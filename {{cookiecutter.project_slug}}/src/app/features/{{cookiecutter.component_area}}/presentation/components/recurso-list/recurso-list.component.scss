@@ -1,0 +1,359 @@
+@use '@angular/material' as mat;
+@import '../../../../../shared/styles/variables';
+@import '../../../../../shared/styles/mixins';
+
+.recurso-list-card {
+  margin: $spacing-lg;
+  
+  .mat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-md;
+    
+    .mat-card-title {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      
+      .total-chip {
+        background-color: mat.get-color-from-palette($vucem-primary, 50);
+        color: mat.get-color-from-palette($vucem-primary, 700);
+      }
+    }
+    
+    .card-actions {
+      display: flex;
+      gap: $spacing-sm;
+      align-items: center;
+    }
+  }
+  
+  .mat-card-content {
+    padding: 0;
+  }
+}
+
+// Estados de carga
+.loading-container {
+  padding: $spacing-xl;
+  text-align: center;
+  
+  .loading-text {
+    margin-top: $spacing-md;
+    color: $text-secondary;
+  }
+}
+
+.error-container {
+  padding: $spacing-xl;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  
+  .mat-icon {
+    font-size: $icon-size-lg;
+    width: $icon-size-lg;
+    height: $icon-size-lg;
+  }
+  
+  .error-message {
+    color: $error-color;
+    margin: 0;
+  }
+}
+
+.empty-container {
+  padding: $spacing-xl;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+  
+  .empty-icon {
+    font-size: $icon-size-xl;
+    width: $icon-size-xl;
+    height: $icon-size-xl;
+    color: $text-disabled;
+  }
+  
+  .empty-message {
+    color: $text-secondary;
+    margin: 0;
+    font-size: $font-size-lg;
+  }
+}
+
+// Tabla
+.table-container {
+  overflow-x: auto;
+  
+  .recursos-table {
+    width: 100%;
+    
+    .mat-column-nombre {
+      min-width: 200px;
+    }
+    
+    .mat-column-descripcion {
+      min-width: 250px;
+    }
+    
+    .mat-column-area {
+      width: 120px;
+    }
+    
+    .mat-column-estado {
+      width: 120px;
+    }
+    
+    .mat-column-tags {
+      min-width: 180px;
+    }
+    
+    .mat-column-fechaModificacion {
+      width: 180px;
+    }
+    
+    .mat-column-acciones {
+      width: 120px;
+    }
+    
+    .mat-row {
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: mat.get-color-from-palette($vucem-primary, 50);
+      }
+      
+      &.selected-row {
+        background-color: mat.get-color-from-palette($vucem-accent, 100);
+      }
+    }
+  }
+}
+
+// Celdas específicas
+.nombre-cell {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  
+  .nombre-text {
+    font-weight: 500;
+    color: $text-primary;
+  }
+  
+  .categoria-chip {
+    background-color: mat.get-color-from-palette($vucem-accent, 100);
+    color: mat.get-color-from-palette($vucem-accent, 800);
+    font-size: $font-size-xs;
+  }
+}
+
+.descripcion-text {
+  color: $text-secondary;
+  line-height: 1.4;
+}
+
+.area-chip {
+  background-color: mat.get-color-from-palette($vucem-primary, 100);
+  color: mat.get-color-from-palette($vucem-primary, 800);
+  font-weight: 500;
+}
+
+// Estados
+.estado-chip {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-weight: 500;
+  
+  .mat-icon {
+    font-size: $icon-size-sm;
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+  
+  &.estado-activo {
+    background-color: $success-light;
+    color: $success-dark;
+    
+    .estado-icon {
+      color: $success-color;
+    }
+  }
+  
+  &.estado-inactivo {
+    background-color: $error-light;
+    color: $error-dark;
+    
+    .estado-icon {
+      color: $error-color;
+    }
+  }
+  
+  &.estado-pendiente {
+    background-color: $warning-light;
+    color: $warning-dark;
+    
+    .estado-icon {
+      color: $warning-color;
+    }
+  }
+  
+  &.estado-archivado {
+    background-color: $text-disabled-light;
+    color: $text-disabled;
+    
+    .estado-icon {
+      color: $text-disabled;
+    }
+  }
+}
+
+// Tags
+.tag-chip {
+  background-color: mat.get-color-from-palette($vucem-primary, 50);
+  color: mat.get-color-from-palette($vucem-primary, 700);
+  font-size: $font-size-xs;
+}
+
+.more-tags-chip {
+  background-color: $text-disabled-light;
+  color: $text-secondary;
+  font-size: $font-size-xs;
+  font-weight: 500;
+}
+
+.no-tags {
+  color: $text-disabled;
+  font-style: italic;
+  font-size: $font-size-sm;
+}
+
+// Fecha
+.fecha-cell {
+  display: flex;
+  flex-direction: column;
+  
+  .fecha-text {
+    color: $text-primary;
+    font-size: $font-size-sm;
+  }
+  
+  .usuario-text {
+    color: $text-secondary;
+    font-size: $font-size-xs;
+  }
+}
+
+// Acciones
+.acciones-cell {
+  display: flex;
+  gap: $spacing-xs;
+  
+  .mat-icon-button {
+    width: $button-size-sm;
+    height: $button-size-sm;
+    line-height: $button-size-sm;
+    
+    .mat-icon {
+      font-size: $icon-size-sm;
+      width: $icon-size-sm;
+      height: $icon-size-sm;
+    }
+  }
+}
+
+// Menu de acciones
+.delete-action {
+  color: $error-color;
+  
+  .mat-icon {
+    color: $error-color;
+  }
+}
+
+// Responsive
+@include respond-to(tablet) {
+  .recurso-list-card {
+    margin: $spacing-md;
+    
+    .mat-card-header {
+      flex-direction: column;
+      align-items: stretch;
+      gap: $spacing-md;
+    }
+  }
+  
+  .table-container {
+    .recursos-table {
+      .mat-column-descripcion {
+        display: none;
+      }
+      
+      .mat-column-tags {
+        display: none;
+      }
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .recurso-list-card {
+    margin: $spacing-sm;
+    
+    .mat-card-title {
+      font-size: $font-size-lg;
+    }
+  }
+  
+  .table-container {
+    .recursos-table {
+      .mat-column-area {
+        display: none;
+      }
+      
+      .mat-column-fechaModificacion {
+        display: none;
+      }
+    }
+  }
+}
+
+// Accesibilidad
+@media (prefers-reduced-motion: reduce) {
+  .mat-row {
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .estado-chip {
+    border: 2px solid currentColor;
+  }
+  
+  .tag-chip,
+  .area-chip,
+  .categoria-chip {
+    border: 1px solid currentColor;
+  }
+}
+
+// Focus states
+.mat-icon-button:focus,
+.mat-raised-button:focus,
+.mat-button:focus {
+  outline: 2px solid mat.get-color-from-palette($vucem-accent, 500);
+  outline-offset: 2px;
+}
+
+.mat-row:focus {
+  outline: 2px solid mat.get-color-from-palette($vucem-accent, 500);
+  outline-offset: -2px;
+}

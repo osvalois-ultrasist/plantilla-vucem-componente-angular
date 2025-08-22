@@ -1,0 +1,81 @@
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "avoid",
+  "rangeStart": 0,
+  "rangeEnd": null,
+  "requirePragma": false,
+  "insertPragma": false,
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "lf",
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular",
+        "printWidth": 120,
+        "singleQuote": false,
+        "htmlWhitespaceSensitivity": "ignore"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss",
+        "singleQuote": true,
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "singleQuote": true,
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json",
+        "printWidth": 100,
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown",
+        "proseWrap": "always",
+        "printWidth": 80
+      }
+    },
+    {
+      "files": "*.yml",
+      "options": {
+        "parser": "yaml",
+        "tabWidth": 2,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.yaml",
+      "options": {
+        "parser": "yaml",
+        "tabWidth": 2,
+        "singleQuote": true
+      }
+    }
+  ]
+}

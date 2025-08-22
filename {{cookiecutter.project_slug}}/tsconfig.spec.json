@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      {% if cookiecutter.testing_framework == 'vitest' %}
+      "vitest/globals",
+      "vitest",
+      "node"
+      {% else %}
+      "jasmine",
+      "node"
+      {% endif %}
+    ],
+    "module": "ES2022",
+    "target": "ES2022"
+  },
+  "files": [
+    "src/test-setup.ts"
+  ],
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.d.ts"
+  ]
+}
