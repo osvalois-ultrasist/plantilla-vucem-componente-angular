@@ -22,7 +22,7 @@ IFS=$'\n\t'
 
 readonly SCRIPT_VERSION="1.0.0"
 readonly GITHUB_USER="osvalois-ultrasist"
-readonly GITHUB_REPO="template-vucem-componente"
+readonly GITHUB_REPO="plantilla-vucem-componente-angular"
 readonly BASE_URL="https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main"
 readonly ARCHIVE_URL="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/archive/main.zip"
 
@@ -233,7 +233,7 @@ generate_angular_app() {
         return 1
     fi
     
-    local template_dir="$TEMP_DIR/template-vucem-componente-main/angular-template"
+    local template_dir="$TEMP_DIR/plantilla-vucem-componente-angular-main"
     
     if [[ ! -d "$template_dir" ]]; then
         log ERROR "Directorio de plantilla Angular no encontrado"
