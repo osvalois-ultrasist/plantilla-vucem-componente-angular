@@ -1,4 +1,4 @@
-# 🚀 Plantilla Angular VUCEM 2025
+# Plantilla Angular VUCEM 2025
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 [![WCAG](https://img.shields.io/badge/WCAG-2.2%20AA-green?style=flat-square)](https://www.w3.org/WAI/WCAG22/quickref/)
 [![Government](https://img.shields.io/badge/Gobierno-México-success?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgMzAwIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMDA2OTQ3Ii8+CiAgICA8cmVjdCB4PSIwIiB5PSIxMDAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ3aGl0ZSIvPgogICAgPHJlY3QgeD0iMCIgeT0iMjAwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0NlMTEyNiIvPgo8L3N2Zz4=)](https://www.gob.mx)
 
-### **Arquitectura empresarial para aplicaciones gubernamentales con Angular 20**
+### Arquitectura empresarial para aplicaciones gubernamentales con Angular 20
 
 *Desarrolla aplicaciones web de clase mundial con los más altos estándares de calidad, seguridad y accesibilidad para el ecosistema VUCEM*
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 🎯 Inicio Inmediato
+## Inicio rápido
 
 Crea una aplicación Angular completa con un solo comando. No necesitas configuración previa, dependencias adicionales o conocimiento específico del stack.
 
@@ -29,11 +29,11 @@ Crea una aplicación Angular completa con un solo comando. No necesitas configur
 curl -s https://raw.githubusercontent.com/osvalois-ultrasist/plantilla-vucem-componente-angular/main/vucem-angular | bash -s mi-app usuarios
 ```
 
-**⚡ En menos de 30 segundos tendrás una aplicación Angular 20 lista para producción**
+**En menos de 30 segundos tendrás una aplicación Angular 20 lista para producción**
 
 </div>
 
-### 🚀 Ejemplo práctico
+### Ejemplo práctico
 
 ```bash
 # Sistema de gestión aduanera
@@ -44,12 +44,12 @@ cd vucem-sistema-aduanas
 npm install && npm start
 
 # Tu aplicación estará disponible en:
-# 🌐 http://localhost:4200
+# http://localhost:4200
 ```
 
 ---
 
-## 💎 Stack Tecnológico 2025
+## Stack tecnológico 2025
 
 Utilizamos las tecnologías más modernas y estables del ecosistema Angular, seleccionadas específicamente para aplicaciones empresariales gubernamentales.
 
@@ -65,76 +65,76 @@ Utilizamos las tecnologías más modernas y estables del ecosistema Angular, sel
 
 </div>
 
-### 🛠️ Herramientas de Desarrollo
+### Herramientas de desarrollo
 
-- **🧪 Testing**: Vitest + Cypress + Angular Testing Library
-- **📊 Calidad**: ESLint + Prettier + SonarQube integration  
-- **🔒 Seguridad**: JWT + RBAC + CSP headers configurados
-- **♿ Accesibilidad**: WCAG 2.2 AA compliant desde el día uno
-- **📱 PWA**: Service Workers + Manifest preconfigurados
+- **Testing**: Vitest + Cypress + Angular Testing Library
+- **Calidad**: ESLint + Prettier + SonarQube integration  
+- **Seguridad**: JWT + RBAC + CSP headers configurados
+- **Accesibilidad**: WCAG 2.2 AA compliant desde el día uno
+- **PWA**: Service Workers + Manifest preconfigurados
 
 ---
 
-## 🏛️ Arquitectura Clean Enterprise
+## Arquitectura Clean Enterprise
 
 Implementamos una arquitectura de 4 capas basada en Domain-Driven Design, específicamente diseñada para aplicaciones gubernamentales complejas que requieren mantenibilidad a largo plazo.
 
 <details>
-<summary><strong>📐 Ver estructura completa</strong></summary>
+<summary><strong>Ver estructura completa</strong></summary>
 
 ```typescript
 src/app/
-├── 🔧 core/                    // Infrastructure Layer
+├── core/                       // Infrastructure Layer
 │   ├── guards/                 // Route & permission guards
 │   ├── interceptors/           // HTTP request/response handling
-│   ├── services/              // Core business services
-│   └── config/                // Application configuration
+│   ├── services/               // Core business services
+│   └── config/                 // Application configuration
 │
-├── 🔄 shared/                  // Cross-cutting Concerns
-│   ├── components/            // Reusable UI components
-│   ├── directives/            // Custom Angular directives
-│   ├── pipes/                 // Data transformation pipes
-│   ├── utils/                 // Helper functions & utilities
-│   └── types/                 // Shared TypeScript interfaces
+├── shared/                     // Cross-cutting Concerns
+│   ├── components/             // Reusable UI components
+│   ├── directives/             // Custom Angular directives
+│   ├── pipes/                  // Data transformation pipes
+│   ├── utils/                  // Helper functions & utilities
+│   └── types/                  // Shared TypeScript interfaces
 │
-├── 🎯 features/               // Business Domain Layer
-│   └── {area-funcional}/      // e.g., usuarios, tramites, reportes
-│       ├── domain/            // 🧠 Business Logic
-│       │   ├── entities/      // Domain entities & models
-│       │   ├── repositories/  // Abstract repository interfaces
-│       │   └── services/      // Domain business rules
+├── features/                   // Business Domain Layer
+│   └── {area-funcional}/       // e.g., usuarios, tramites, reportes
+│       ├── domain/             // Business Logic
+│       │   ├── entities/       // Domain entities & models
+│       │   ├── repositories/   // Abstract repository interfaces
+│       │   └── services/       // Domain business rules
 │       │
-│       ├── infrastructure/    // 💾 Data Access Layer
-│       │   ├── repositories/  // Concrete repository implementations
-│       │   ├── mappers/       // DTO ↔ Domain entity mappers
-│       │   └── api/           // HTTP API service clients
+│       ├── infrastructure/     // Data Access Layer
+│       │   ├── repositories/   // Concrete repository implementations
+│       │   ├── mappers/        // DTO ↔ Domain entity mappers
+│       │   └── api/            // HTTP API service clients
 │       │
-│       └── presentation/      // 🎨 Presentation Layer
-│           ├── pages/         // Smart container components
-│           ├── components/    // Dumb presentation components
-│           ├── state/         // NgRx store (actions, effects, reducers)
-│           └── resolvers/     // Route data resolvers
+│       └── presentation/       // Presentation Layer
+│           ├── pages/          // Smart container components
+│           ├── components/     // Dumb presentation components
+│           ├── state/          // NgRx store (actions, effects, reducers)
+│           └── resolvers/      // Route data resolvers
 │
-└── 🏠 layout/                 // Application Shell
-    ├── header/                // Main navigation header
-    ├── sidebar/               // Side navigation menu
-    ├── footer/                // Application footer
-    └── main/                  // Main content wrapper
+└── layout/                     // Application Shell
+    ├── header/                 // Main navigation header
+    ├── sidebar/                // Side navigation menu
+    ├── footer/                 // Application footer
+    └── main/                   // Main content wrapper
 ```
 
 </details>
 
-### 🔄 Flujo de Arquitectura
+### Flujo de arquitectura
 
 ```mermaid
 graph TB
-    A[👤 Usuario] --> B[🎨 Presentation Layer]
-    B --> C[🧠 Domain Layer]
-    C --> D[💾 Infrastructure Layer]
-    D --> E[🌐 External APIs]
+    A[Usuario] --> B[Presentation Layer]
+    B --> C[Domain Layer]
+    C --> D[Infrastructure Layer]
+    D --> E[External APIs]
     
-    F[🔧 Core Services] --> C
-    G[🔄 Shared Components] --> B
+    F[Core Services] --> C
+    G[Shared Components] --> B
     
     style A fill:#e1f5fe
     style B fill:#f3e5f5
@@ -145,33 +145,33 @@ graph TB
 
 ---
 
-## 🚀 Características Principales
+## Características principales
 
-### ⚡ Desarrollo Acelerado
+### Desarrollo acelerado
 
 <div align="center">
 
 | Característica | Descripción | Beneficio |
 |:---------------|:------------|:----------|
-| 🔥 **Hot Reload** | Recarga instantánea durante desarrollo | Productividad máxima |
-| 📱 **Mobile First** | Diseño responsive desde el primer día | UX universal |
-| 🎨 **Design System** | Componentes consistentes y reutilizables | Coherencia visual |
-| ⚡ **Lazy Loading** | Carga bajo demanda de módulos | Performance optimizado |
-| 🔧 **Dev Tools** | Angular DevTools + debugging avanzado | Desarrollo eficiente |
+| **Hot Reload** | Recarga instantánea durante desarrollo | Productividad máxima |
+| **Mobile First** | Diseño responsive desde el primer día | UX universal |
+| **Design System** | Componentes consistentes y reutilizables | Coherencia visual |
+| **Lazy Loading** | Carga bajo demanda de módulos | Performance optimizado |
+| **Dev Tools** | Angular DevTools + debugging avanzado | Desarrollo eficiente |
 
 </div>
 
-### 🛡️ Seguridad Empresarial
+### Seguridad empresarial
 
 > **Cumple con los más altos estándares de seguridad gubernamental**
 
-- **🔐 Autenticación JWT**: Tokens seguros con refresh automático y validación de claims
-- **👮 Autorización RBAC**: Control granular basado en roles y permisos
-- **🛡️ Route Guards**: Protección de rutas sensibles con validación en tiempo real  
-- **🔒 HTTP Security**: Interceptors para headers de seguridad y sanitización
-- **🚨 Audit Trail**: Logging completo de acciones para auditoría
+- **Autenticación JWT**: Tokens seguros con refresh automático y validación de claims
+- **Autorización RBAC**: Control granular basado en roles y permisos
+- **Route Guards**: Protección de rutas sensibles con validación en tiempo real  
+- **HTTP Security**: Interceptors para headers de seguridad y sanitización
+- **Audit Trail**: Logging completo de acciones para auditoría
 
-### 🧪 Testing Integral
+### Testing integral
 
 Implementamos una estrategia de testing de 3 niveles con cobertura mínima del 90%:
 
@@ -196,21 +196,21 @@ it('should complete full user registration flow', () => {
 });
 ```
 
-### ♿ Accesibilidad WCAG 2.2 AA
+### Accesibilidad WCAG 2.2 AA
 
 Cumplimiento completo con estándares internacionales de accesibilidad:
 
-- **🎹 Navegación por teclado**: 100% navegable sin mouse
-- **📢 Screen readers**: Compatible con NVDA, JAWS, VoiceOver
-- **🎨 Alto contraste**: Ratio mínimo 4.5:1 en todos los elementos
-- **🔍 Zoom**: Soporte hasta 200% sin pérdida de funcionalidad
-- **📝 Semántica**: HTML semántico con ARIA labels apropiados
+- **Navegación por teclado**: 100% navegable sin mouse
+- **Screen readers**: Compatible con NVDA, JAWS, VoiceOver
+- **Alto contraste**: Ratio mínimo 4.5:1 en todos los elementos
+- **Zoom**: Soporte hasta 200% sin pérdida de funcionalidad
+- **Semántica**: HTML semántico con ARIA labels apropiados
 
 ---
 
-## 📊 Performance & Métricas
+## Performance y métricas
 
-### 🎯 Core Web Vitals
+### Core Web Vitals
 
 Todas nuestras aplicaciones generadas cumplen con los estándares más exigentes de performance:
 
@@ -218,28 +218,28 @@ Todas nuestras aplicaciones generadas cumplen con los estándares más exigentes
 
 | Métrica | Objetivo | Logrado | Estado |
 |:--------|:--------:|:-------:|:------:|
-| **Lighthouse Score** | 90+ | 95+ | 🟢 |
-| **First Contentful Paint** | < 1.5s | ~1.2s | 🟢 |
-| **Largest Contentful Paint** | < 2.5s | ~2.1s | 🟢 |
-| **Time to Interactive** | < 3.0s | ~2.5s | 🟢 |
-| **Cumulative Layout Shift** | < 0.1 | ~0.05 | 🟢 |
-| **Bundle Size (gzipped)** | < 500KB | ~420KB | 🟢 |
+| **Lighthouse Score** | 90+ | 95+ | ✅ |
+| **First Contentful Paint** | < 1.5s | ~1.2s | ✅ |
+| **Largest Contentful Paint** | < 2.5s | ~2.1s | ✅ |
+| **Time to Interactive** | < 3.0s | ~2.5s | ✅ |
+| **Cumulative Layout Shift** | < 0.1 | ~0.05 | ✅ |
+| **Bundle Size (gzipped)** | < 500KB | ~420KB | ✅ |
 
 </div>
 
-### 🚀 Optimizaciones Incluidas
+### Optimizaciones incluidas
 
-- **📦 Tree Shaking**: Eliminación automática de código no utilizado
-- **⚡ Code Splitting**: Carga bajo demanda con lazy loading
-- **🗜️ Compresión**: Gzip + Brotli para assets optimizados
-- **💾 PWA**: Service Workers con estrategias de cache inteligentes
-- **🔄 Preloading**: Precarga estratégica de recursos críticos
+- **Tree Shaking**: Eliminación automática de código no utilizado
+- **Code Splitting**: Carga bajo demanda con lazy loading
+- **Compresión**: Gzip + Brotli para assets optimizados
+- **PWA**: Service Workers con estrategias de cache inteligentes
+- **Preloading**: Precarga estratégica de recursos críticos
 
 ---
 
-## 🛠️ Flujo de Desarrollo
+## Flujo de desarrollo
 
-### 📱 Comandos Principales
+### Comandos principales
 
 ```bash
 # Desarrollo local
@@ -260,7 +260,7 @@ npm run audit               # Auditoría de vulnerabilidades
 npm run lighthouse          # Análisis completo de performance
 ```
 
-### 🔄 Pipeline DevSecOps
+### Pipeline DevSecOps
 
 ```yaml
 # Ejemplo de integración CI/CD
@@ -283,12 +283,12 @@ jobs:
 
 ---
 
-## 🏛️ Casos de Uso Gubernamentales
+## Casos de uso gubernamentales
 
-### 📋 Ejemplos Prácticos
+### Ejemplos prácticos
 
 <details>
-<summary><strong>🏢 Sistemas Administrativos</strong></summary>
+<summary><strong>Sistemas administrativos</strong></summary>
 
 ```bash
 # Sistema de gestión de trámites
@@ -304,7 +304,7 @@ curl -s vucem-angular.sh | bash -s control-aduanas comercio "Control aduanero VU
 </details>
 
 <details>
-<summary><strong>📊 Dashboards Ejecutivos</strong></summary>
+<summary><strong>Dashboards ejecutivos</strong></summary>
 
 ```bash
 # Dashboard de indicadores gubernamentales
@@ -317,7 +317,7 @@ curl -s vucem-angular.sh | bash -s analytics-gov estadisticas "Analytics guberna
 </details>
 
 <details>
-<summary><strong>👥 Gestión de Usuarios</strong></summary>
+<summary><strong>Gestión de usuarios</strong></summary>
 
 ```bash
 # Sistema de administración de usuarios
@@ -331,19 +331,19 @@ curl -s vucem-angular.sh | bash -s control-accesos seguridad "Control de accesos
 
 ---
 
-## 🔒 Seguridad & Cumplimiento
+## Seguridad y cumplimiento
 
-### 🛡️ Marco de Seguridad
+### Marco de seguridad
 
 Implementamos un marco de seguridad multinivel que cumple con las normativas gubernamentales más estrictas:
 
-- **🔐 Autenticación Multi-Factor**: Integración con sistemas gubernamentales
-- **📊 Auditoría Completa**: Logging de todas las acciones para compliance  
-- **🔒 Encriptación**: E2E encryption para datos sensibles
-- **🚨 Monitoreo**: Detección de anomalías en tiempo real
-- **📋 Compliance**: Alineado con CNS, NIST y estándares europeos
+- **Autenticación Multi-Factor**: Integración con sistemas gubernamentales
+- **Auditoría completa**: Logging de todas las acciones para compliance  
+- **Encriptación**: E2E encryption para datos sensibles
+- **Monitoreo**: Detección de anomalías en tiempo real
+- **Compliance**: Alineado con CNS, NIST y estándares europeos
 
-### 📜 Certificaciones y Normativas
+### Certificaciones y normativas
 
 <div align="center">
 
@@ -359,16 +359,16 @@ Implementamos un marco de seguridad multinivel que cumple con las normativas gub
 
 ---
 
-## 🤝 Soporte & Comunidad
+## Soporte y comunidad
 
-### 💬 Canales de Comunicación
+### Canales de comunicación
 
-- **📧 Email**: [vucem-dev@economia.gob.mx](mailto:vucem-dev@economia.gob.mx)
-- **🐛 Issues**: [Reportar problemas](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/issues)
-- **💭 Discussions**: [Ideas y propuestas](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/discussions)
-- **📚 Wiki**: [Documentación extendida](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/wiki)
+- **Email**: [vucem-dev@economia.gob.mx](mailto:vucem-dev@economia.gob.mx)
+- **Issues**: [Reportar problemas](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/issues)
+- **Discussions**: [Ideas y propuestas](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/discussions)
+- **Wiki**: [Documentación extendida](https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular/wiki)
 
-### 🔧 Desarrollo Local
+### Desarrollo local
 
 ```bash
 # Contribuir al proyecto
@@ -385,25 +385,25 @@ npm install && npm start
 
 ---
 
-## 🗺️ Roadmap 2025
+## Roadmap 2025
 
 <div align="center">
 
-### Q1 2025 ✅ **Completado**
+### Q1 2025 - Completado ✅
 - Angular 20 + Signal-based architecture
 - Clean Architecture implementation
 - Security framework completo
 - Testing suite Vitest + Cypress
 - WCAG 2.2 AA compliance
 
-### Q2 2025 🔄 **En Desarrollo**
+### Q2 2025 - En desarrollo
 - DevSecOps pipeline automation
 - Kubernetes deployment templates  
 - Observability & monitoring
 - Micro-frontend architecture
 - AI/ML integration templates
 
-### Q3 2025 📅 **Planificado**
+### Q3 2025 - Planificado
 - Advanced analytics dashboard
 - Real-time collaboration features
 - Offline-first PWA capabilities
@@ -414,11 +414,11 @@ npm install && npm start
 
 ---
 
-## 📄 Licencia & Reconocimientos
+## Licencia y reconocimientos
 
 **GPL-3.0** © 2025 - Gobierno de México
 
-### 🏛️ Desarrollado para el Gobierno Digital
+### Desarrollado para el Gobierno Digital
 
 Esta plantilla ha sido específicamente diseñada para cumplir con los lineamientos y estándares del gobierno mexicano:
 
@@ -431,7 +431,7 @@ Esta plantilla ha sido específicamente diseñada para cumplir con los lineamien
 
 <div align="center">
 
-## 🎉 ¡Comienza Tu Proyecto Ahora!
+## Comienza tu proyecto ahora
 
 ### Una línea de código, una aplicación completa de clase mundial
 
@@ -440,16 +440,16 @@ curl -s https://raw.githubusercontent.com/osvalois-ultrasist/plantilla-vucem-com
 ```
 
 ### En 30 segundos tendrás:
-✅ Aplicación Angular 20 completamente funcional  
-✅ Arquitectura empresarial implementada  
-✅ Seguridad y autenticación configuradas  
-✅ Testing suite lista para desarrollo TDD  
-✅ Compliance WCAG 2.2 AA garantizado  
-✅ Performance optimizado desde el día uno  
+- ✅ Aplicación Angular 20 completamente funcional  
+- ✅ Arquitectura empresarial implementada  
+- ✅ Seguridad y autenticación configuradas  
+- ✅ Testing suite lista para desarrollo TDD  
+- ✅ Compliance WCAG 2.2 AA garantizado  
+- ✅ Performance optimizado desde el día uno  
 
 ---
 
-**🌟 Creado con ❤️ por el equipo VUCEM para impulsar la transformación digital gubernamental**
+**Creado con ❤️ por el equipo VUCEM para impulsar la transformación digital gubernamental**
 
 [![Built with Angular](https://img.shields.io/badge/Built%20with-Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
 [![Powered by TypeScript](https://img.shields.io/badge/Powered%20by-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
