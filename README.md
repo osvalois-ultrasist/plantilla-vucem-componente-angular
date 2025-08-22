@@ -1,4 +1,4 @@
-# Plantilla Angular VUCEM 2025
+# Plantilla Angular VUCEM
 
 <div align="center">
 
@@ -49,26 +49,26 @@ npm install && npm start
 
 ---
 
-## Stack tecnológico 2025
+## Stack tecnológico
 
 Utilizamos las tecnologías más modernas y estables del ecosistema Angular, seleccionadas específicamente para aplicaciones empresariales gubernamentales.
 
 <div align="center">
 
-| Tecnología | Versión | Propósito | Estado |
-|:----------:|:-------:|:----------|:------:|
-| ![Angular](https://img.shields.io/badge/Angular-20.0-DD0031?logo=angular&logoColor=white) | `20.0.0` | Framework principal con Signals | ✅ |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white) | `5.7+` | Type safety empresarial | ✅ |
-| ![Material](https://img.shields.io/badge/Material-17.0-1976D2?logo=material-design&logoColor=white) | `17.0+` | Design System 3.0 | ✅ |
-| ![RxJS](https://img.shields.io/badge/RxJS-7.8-B7178C?logo=reactivex&logoColor=white) | `7.8+` | Programación reactiva | ✅ |
-| ![NgRx](https://img.shields.io/badge/NgRx-17.0-764ABC?logo=redux&logoColor=white) | `17.0+` | State management | ✅ |
+|                                            Tecnología                                            |  Versión  | Propósito                      | Estado |
+| :-----------------------------------------------------------------------------------------------: | :--------: | :------------------------------ | :----: |
+|      ![Angular](https://img.shields.io/badge/Angular-20.0-DD0031?logo=angular&logoColor=white)      | `20.0.0` | Framework principal con Signals |   ✅   |
+|  ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)  |  `5.7+`  | Type safety empresarial         |   ✅   |
+| ![Material](https://img.shields.io/badge/Material-17.0-1976D2?logo=material-design&logoColor=white) | `17.0+` | Design System 3.0               |   ✅   |
+|        ![RxJS](https://img.shields.io/badge/RxJS-7.8-B7178C?logo=reactivex&logoColor=white)        |  `7.8+`  | Programación reactiva          |   ✅   |
+|          ![NgRx](https://img.shields.io/badge/NgRx-17.0-764ABC?logo=redux&logoColor=white)          | `17.0+` | State management                |   ✅   |
 
 </div>
 
 ### Herramientas de desarrollo
 
 - **Testing**: Vitest + Cypress + Angular Testing Library
-- **Calidad**: ESLint + Prettier + SonarQube integration  
+- **Calidad**: ESLint + Prettier + SonarQube integration
 - **Seguridad**: JWT + RBAC + CSP headers configurados
 - **Accesibilidad**: WCAG 2.2 AA compliant desde el día uno
 - **PWA**: Service Workers + Manifest preconfigurados
@@ -132,10 +132,10 @@ graph TB
     B --> C[Domain Layer]
     C --> D[Infrastructure Layer]
     D --> E[External APIs]
-    
+  
     F[Core Services] --> C
     G[Shared Components] --> B
-    
+  
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#e8f5e8
@@ -151,13 +151,13 @@ graph TB
 
 <div align="center">
 
-| Característica | Descripción | Beneficio |
-|:---------------|:------------|:----------|
-| **Hot Reload** | Recarga instantánea durante desarrollo | Productividad máxima |
-| **Mobile First** | Diseño responsive desde el primer día | UX universal |
-| **Design System** | Componentes consistentes y reutilizables | Coherencia visual |
-| **Lazy Loading** | Carga bajo demanda de módulos | Performance optimizado |
-| **Dev Tools** | Angular DevTools + debugging avanzado | Desarrollo eficiente |
+| Característica         | Descripción                             | Beneficio              |
+| :---------------------- | :--------------------------------------- | :--------------------- |
+| **Hot Reload**    | Recarga instantánea durante desarrollo  | Productividad máxima  |
+| **Mobile First**  | Diseño responsive desde el primer día  | UX universal           |
+| **Design System** | Componentes consistentes y reutilizables | Coherencia visual      |
+| **Lazy Loading**  | Carga bajo demanda de módulos           | Performance optimizado |
+| **Dev Tools**     | Angular DevTools + debugging avanzado    | Desarrollo eficiente   |
 
 </div>
 
@@ -167,7 +167,7 @@ graph TB
 
 - **Autenticación JWT**: Tokens seguros con refresh automático y validación de claims
 - **Autorización RBAC**: Control granular basado en roles y permisos
-- **Route Guards**: Protección de rutas sensibles con validación en tiempo real  
+- **Route Guards**: Protección de rutas sensibles con validación en tiempo real
 - **HTTP Security**: Interceptors para headers de seguridad y sanitización
 - **Audit Trail**: Logging completo de acciones para auditoría
 
@@ -216,14 +216,14 @@ Todas nuestras aplicaciones generadas cumplen con los estándares más exigentes
 
 <div align="center">
 
-| Métrica | Objetivo | Logrado | Estado |
-|:--------|:--------:|:-------:|:------:|
-| **Lighthouse Score** | 90+ | 95+ | ✅ |
-| **First Contentful Paint** | < 1.5s | ~1.2s | ✅ |
-| **Largest Contentful Paint** | < 2.5s | ~2.1s | ✅ |
-| **Time to Interactive** | < 3.0s | ~2.5s | ✅ |
-| **Cumulative Layout Shift** | < 0.1 | ~0.05 | ✅ |
-| **Bundle Size (gzipped)** | < 500KB | ~420KB | ✅ |
+| Métrica                           | Objetivo | Logrado | Estado |
+| :--------------------------------- | :------: | :-----: | :----: |
+| **Lighthouse Score**         |   90+   |   95+   |   ✅   |
+| **First Contentful Paint**   |  < 1.5s  |  ~1.2s  |   ✅   |
+| **Largest Contentful Paint** |  < 2.5s  |  ~2.1s  |   ✅   |
+| **Time to Interactive**      |  < 3.0s  |  ~2.5s  |   ✅   |
+| **Cumulative Layout Shift**  |  < 0.1  |  ~0.05  |   ✅   |
+| **Bundle Size (gzipped)**    | < 500KB | ~420KB |   ✅   |
 
 </div>
 
@@ -338,7 +338,7 @@ curl -s vucem-angular.sh | bash -s control-accesos seguridad "Control de accesos
 Implementamos un marco de seguridad multinivel que cumple con las normativas gubernamentales más estrictas:
 
 - **Autenticación Multi-Factor**: Integración con sistemas gubernamentales
-- **Auditoría completa**: Logging de todas las acciones para compliance  
+- **Auditoría completa**: Logging de todas las acciones para compliance
 - **Encriptación**: E2E encryption para datos sensibles
 - **Monitoreo**: Detección de anomalías en tiempo real
 - **Compliance**: Alineado con CNS, NIST y estándares europeos
@@ -347,13 +347,13 @@ Implementamos un marco de seguridad multinivel que cumple con las normativas gub
 
 <div align="center">
 
-| Normativa | Descripción | Estado |
-|:----------|:------------|:------:|
-| **WCAG 2.2 AA** | Accesibilidad web internacional | ✅ |
-| **NOM-151-SCFI-2016** | Gobierno digital México | ✅ |
-| **Lineamientos CNS** | Ciberseguridad nacional | ✅ |
-| **EAA 2025** | European Accessibility Act | ✅ |
-| **GDPR Compliant** | Protección de datos europeos | ✅ |
+| Normativa                   | Descripción                    | Estado |
+| :-------------------------- | :------------------------------ | :----: |
+| **WCAG 2.2 AA**       | Accesibilidad web internacional |   ✅   |
+| **NOM-151-SCFI-2016** | Gobierno digital México        |   ✅   |
+| **Lineamientos CNS**  | Ciberseguridad nacional         |   ✅   |
+| **EAA 2025**          | European Accessibility Act      |   ✅   |
+| **GDPR Compliant**    | Protección de datos europeos   |   ✅   |
 
 </div>
 
@@ -370,47 +370,17 @@ Implementamos un marco de seguridad multinivel que cumple con las normativas gub
 
 ### Desarrollo local
 
-```bash
-# Contribuir al proyecto
+xs# Contribuir al proyecto
 git clone https://github.com/osvalois-ultrasist/plantilla-vucem-componente-angular.git
 cd plantilla-vucem-componente-angular
 
 # Probar la plantilla localmente
+
 ./vucem-angular test-app testing "Aplicación de pruebas"
 cd vucem-test-app
 npm install && npm start
 
 # La aplicación estará disponible en http://localhost:4200
-```
-
----
-
-## Roadmap 2025
-
-<div align="center">
-
-### Q1 2025 - Completado ✅
-- Angular 20 + Signal-based architecture
-- Clean Architecture implementation
-- Security framework completo
-- Testing suite Vitest + Cypress
-- WCAG 2.2 AA compliance
-
-### Q2 2025 - En desarrollo
-- DevSecOps pipeline automation
-- Kubernetes deployment templates  
-- Observability & monitoring
-- Micro-frontend architecture
-- AI/ML integration templates
-
-### Q3 2025 - Planificado
-- Advanced analytics dashboard
-- Real-time collaboration features
-- Offline-first PWA capabilities
-- Multi-language i18n templates
-- Advanced security features
-
-</div>
 
 ---
 
@@ -440,12 +410,13 @@ curl -s https://raw.githubusercontent.com/osvalois-ultrasist/plantilla-vucem-com
 ```
 
 ### En 30 segundos tendrás:
-- ✅ Aplicación Angular 20 completamente funcional  
-- ✅ Arquitectura empresarial implementada  
-- ✅ Seguridad y autenticación configuradas  
-- ✅ Testing suite lista para desarrollo TDD  
-- ✅ Compliance WCAG 2.2 AA garantizado  
-- ✅ Performance optimizado desde el día uno  
+
+- ✅ Aplicación Angular 20 completamente funcional
+- ✅ Arquitectura empresarial implementada
+- ✅ Seguridad y autenticación configuradas
+- ✅ Testing suite lista para desarrollo TDD
+- ✅ Compliance WCAG 2.2 AA garantizado
+- ✅ Performance optimizado desde el día uno
 
 ---
 
